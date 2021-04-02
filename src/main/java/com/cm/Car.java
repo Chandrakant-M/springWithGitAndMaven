@@ -1,5 +1,6 @@
 package com.cm;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /*
@@ -8,13 +9,25 @@ import org.springframework.stereotype.Component;
 */
 @Component()
 public class Car implements Vehicle {
+	
+	// when we set this annotation, spring will know that it should create an object for this class (using using xml or annotation)
+	@Autowired
+	private Tyre tyre;
 
 	public Car() {
-		super();
-		// TODO Auto-generated constructor stub
+		System.out.println("car ctor called");
+	}
+	
+	public Tyre getTyre() {
+		return tyre;
 	}
 
-	public void drive() {
-		System.out.println("Driving car...");
+	public void setTyre(Tyre tyre) {
+		this.tyre = tyre;
 	}
+	
+	public void drive() {
+		System.out.println("Driving car...   Tyre:"+tyre);
+	}
+
 }

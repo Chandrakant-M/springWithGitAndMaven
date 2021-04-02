@@ -15,16 +15,7 @@
 	-->
 	
 	<bean id="tyre" class="com.cm.Tyre">
-		<!--
-		when the spring has created the tyre object, it calls the setter of the meber var named brand.
-		<property name="brand" value="MRF"></property>-->
 		<property name="brand" value="MRF"></property>
-
-				
-		<!-- 
-		while creating the objects, contructor-arg element's value attr is set to member variables by spring.
-		this is set first. then setter is called. So, variable will have MRF(the value in the property in the previous line -->
-		<constructor-arg value="Apollo"></constructor-arg> 
 	</bean>
 	
 </beans>

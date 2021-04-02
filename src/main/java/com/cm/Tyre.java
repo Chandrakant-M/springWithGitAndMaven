@@ -1,16 +1,11 @@
 package com.cm;
 
 public class Tyre {
-	private String brand;
-	
-
-
-	public Tyre(String brand) {
-		super();
-		this.brand = brand;
+	public Tyre() {
+		System.out.println("tyre ctor called");
 	}
 
-
+	private String brand;
 
 	public String getBrand() {
 		return brand;
@@ -22,7 +17,7 @@ public class Tyre {
 
 	@Override
 	public String toString() {
-		return "Tyre [brand=" + brand + "]";
+		return this.brand;
 	}
 
 }
