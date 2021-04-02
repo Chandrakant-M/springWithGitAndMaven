@@ -9,7 +9,7 @@
    		autowire by constructor is same as aw by type except that the variables are populated (injected)
    		using ctor instead of setter methods. Appropriate arg ctor should be present (in Car)   		
    -->
-	<bean id="car" class="com.cm.Car" autowire="constructor" >
+	<bean id="car" class="com.cm.Car" autowire="constructor" scope="singleton" >
 	</bean>
 
 <!--	autowire by type id can be different but matching is done based on class attr -->
