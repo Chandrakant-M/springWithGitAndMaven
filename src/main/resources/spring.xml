@@ -6,10 +6,10 @@
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
    
    <!-- 
-   		autowire by type will only work if there is only one member reference variable ( in Car )
-   		
+   		autowire by constructor is same as aw by type except that the variables are populated (injected)
+   		using ctor instead of setter methods. Appropriate arg ctor should be present (in Car)   		
    -->
-	<bean id="car" class="com.cm.Car" autowire="byType" >
+	<bean id="car" class="com.cm.Car" autowire="constructor" >
 	</bean>
 
 <!--	autowire by type id can be different but matching is done based on class attr -->

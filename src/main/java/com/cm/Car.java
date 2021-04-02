@@ -11,17 +11,21 @@ public class Car implements Vehicle {
 	
 	private Tyre tyre;
 
-	public Car() {
+	public Car(Tyre tyre) {
+		this.tyre = tyre;
 		System.out.println("car ctor called");
 	}
-	
-	public Tyre getTyre() {
-		return tyre;
-	}
 
-	public void setTyre(Tyre tyre) {
-		this.tyre = tyre;
-	}
+	/*
+	 * getter and setter needn't be present for autowire by ctor. Correct ctor is needed, however.
+	 */	
+//	public Tyre getTyre() {
+//		return tyre;
+//	}
+//
+//	public void setTyre(Tyre tyre) {
+//		this.tyre = tyre;
+//	}
 	
 	public void drive() {
 		System.out.println("Driving car...   Tyre:"+tyre);
