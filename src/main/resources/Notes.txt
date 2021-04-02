@@ -1,0 +1,15 @@
+
+Spring container instantiates all the beans during initialization by default.
+And then, when we do a getBean(), it returns the reference of that object.
+
+Bean scopes:
+1. Singleton: only once per Spring container. Default
+  There is only one object created which spring returns on every call made by the application.
+2. Prototype: new bean created with every request or reference(ie new obj for every ref as well).
+  New object created with every getBean() call made by the application.
+  
+  Web-aware context bean scopes:
+  1. Request scope: new bean per servlet request.
+  2. Session scope: new bean per session.
+  3. Global scope: new bean per global HTTP session (portlet context)
+  
