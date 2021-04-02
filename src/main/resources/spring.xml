@@ -5,20 +5,17 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
    
-	<bean id="car" class="com.cm.Car" autowire="byName" >
+   <!-- 
+   		autowire by type will only work if there is only one member reference variable ( in Car )
+   		
+   -->
+	<bean id="car" class="com.cm.Car" autowire="byType" >
 	</bean>
 
-	
-	<bean id="tyre" class="com.cm.Tyre">
+<!--	autowire by type id can be different but matching is done based on class attr -->
+	<bean id="tyreDiffID" class="com.cm.Tyre">
 		<property name="brand" value="MRF"></property>
 	</bean>
 	
-	<!--
-	This autowiring (naming the bean id=tyre1 will not work. Bean id should be same as member reference variable in Car.
-	
-	<bean id="tyre1" class="com.cm.Tyre">
-		<property name="brand" value="MRF"></property>
-	</bean>
-	-->
 	
 </beans>
