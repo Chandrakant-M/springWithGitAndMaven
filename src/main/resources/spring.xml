@@ -5,14 +5,10 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
    
-	<context:component-scan base-package="com.cm"></context:component-scan>
-	<!--
-	when we call getBean() using ClasspathXMLcontext object passing "vehicle" as an argument,
-	spring will look for bean with id "vehicle" in this xml file(the name of which we use to create the said context object)
-	
-	
-	<bean id="vehicle" class="com.cm.Bike" ></bean>
-	-->
+	<bean id="car" class="com.cm.Car" >
+		<property name="tyre" ref="tyre"></property>
+	</bean>
+
 	
 	<bean id="tyre" class="com.cm.Tyre">
 		<property name="brand" value="MRF"></property>
